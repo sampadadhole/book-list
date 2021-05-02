@@ -22,6 +22,7 @@ UI.prototype.addBooktoList =  function(book){
     <td><a href = "#" class="delete" >X</td>`;
 // console.log(row);
     list.appendChild(row);
+    console.log(list);
     
 }
 //show alert
@@ -91,14 +92,16 @@ function getLatestDetails(e){
 //delete items
 function deleteItems(e){
     // console.log(e.target.parentElement);
-    if(e.target.contains(document.querySelector(".delete")))
+    if(bookList.contains(document.querySelector(".delete")))
     {
+        // alert(1);
+        // console.log(bookList);
         const parEl = e.target.parentElement.parentElement;
         console.log(parEl);
         parEl.remove();
         const ui = new UI();
         
-        ui.showAlert("Book Removed!","success")
+        ui.showAlert("Book Removed!","success");
     }
     
     e.preventDefault();
