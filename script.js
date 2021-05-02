@@ -27,18 +27,18 @@ UI.prototype.addBooktoList =  function(book){
 }
 //show alert
 UI.prototype.showAlert= function(message, className){
-    const div = document.createElement("div");
-    div.className = `alert ${className}`;
-    div.appendChild(document.createTextNode(message));
-    const container = document.querySelector(".container");
-    const form = document.querySelector("#book-form");
-    container.insertBefore(div, form);
+        const div = document.createElement("div");
+        div.className = `alert ${className}`;
+        div.appendChild(document.createTextNode(message));
+        const container = document.querySelector(".container");
+        const form = document.querySelector("#book-form");
+        container.insertBefore(div, form);
 
-    setTimeout(noerror, 3000);
-}
-function noerror(){
-    document.querySelector(".alert").remove();  
-}
+        setTimeout(noerror, 3000);
+    }
+    function noerror(){
+        document.querySelector(".alert").remove();  
+    }
 //clear fields
 UI.prototype.clearFields = function(){
     document.querySelector("#title").value ="";
